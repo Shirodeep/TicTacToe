@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
 
 char field[3][3] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -7,7 +6,6 @@ int i, j, playerInputValue;
 
 void displayGame()
 {
-    system("CLS");
     // Displaying the output of game
     for (i = 0; i < 3; i++)
     {
@@ -148,3 +146,5 @@ int main()
     }
     return 0;
 }
+
+// This code is done by Shirodeep Dahal if you want to suggest easier code than you can Email me -shirodeepdahal0987@gmail.com
