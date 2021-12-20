@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctype.h>
 using namespace std;
 
 char field[3][3] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -21,8 +22,25 @@ void gameBody(int gameTurn)
 {
     char playerDisplayValue = 'O';
 
-    cout << "Enter the field you want to mark:";
-    cin >> playerInputValue;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+
+            if (isalpha(field[i][j]))
+            {
+                cout << "Enter the field that is not selected by player  ";
+                gameTurn--;
+            }
+            else
+            {
+                cout << "Enter the field you want to mark:";
+                cin >> playerInputValue;
+                goto aa;
+            }
+        }
+    }
+aa:
     // Switching players
     if (gameTurn % 2 == 0)
     {
