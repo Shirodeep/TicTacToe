@@ -17,14 +17,14 @@ void displayGame()
     }
 }
 
-void gameBody(int count)
+void gameBody(int gameTurn)
 {
     char playerDisplayValue = 'O';
 
     cout << "Enter the field you want to mark:";
     cin >> playerInputValue;
     // Switching players
-    if (count % 2 == 0)
+    if (gameTurn % 2 == 0)
     {
         playerDisplayValue = 'X';
     }
@@ -116,7 +116,7 @@ char checkGame()
 int main()
 {
     // initializing counter for toggling player
-    int count = 0;
+    int gameTurn = 0;
 
     cout << endl
          << "\t\tWelcome to TICTACTOE -v 1.0" << endl;
@@ -124,9 +124,9 @@ int main()
     // Infinite loop for game
     while (1)
     {
-        gameBody(count);
+        gameBody(gameTurn);
         displayGame();
-        if (count == 9)
+        if (gameTurn == (gameTurn - 1))
         {
             cout << "DRAW!!!";
             break;
@@ -142,7 +142,7 @@ int main()
             break;
         }
 
-        count++;
+        gameTurn++;
     }
     return 0;
 }
