@@ -22,24 +22,8 @@ void gameBody(int gameTurn)
 {
     char playerDisplayValue = 'O';
 
-    for (i = 0; i < 3; i++)
-    {
-        for (j = 0; j < 3; j++)
-        {
-
-            if (isalpha(field[i][j]))
-            {
-                cout << "Enter the field that is not selected by player  ";
-                gameTurn--;
-            }
-            else
-            {
-                cout << "Enter the field you want to mark:";
+                    cout << "Enter the field you want to mark:";
                 cin >> playerInputValue;
-                goto aa;
-            }
-        }
-    }
 aa:
     // Switching players
     if (gameTurn % 2 == 0)
